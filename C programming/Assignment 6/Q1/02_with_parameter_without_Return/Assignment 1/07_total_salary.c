@@ -1,0 +1,35 @@
+#include <stdio.h>
+
+void calculateSalary(float basic)
+{
+    float da, ta, hra;
+    float totalSalary;
+
+    if(basic <= 5000)
+    {
+        da = basic * 10 / 100;
+        ta = basic * 20 / 100;
+        hra = basic * 25 / 100;
+    }
+    else
+    {
+        da = basic * 15 / 100;
+        ta = basic * 25 / 100;
+        hra = basic * 30 / 100;
+    }
+
+    totalSalary = basic + da + ta + hra;
+
+    printf("Basic Salary = %.2f", basic);
+    printf("DA = %.2f", da);
+    printf("TA = %.2f", ta);
+    printf("HRA = %.2f", hra);
+    printf("Total Salary = %.2f", totalSalary);
+}
+
+void main()
+{
+    float basic = 6000;
+
+    calculateSalary(basic);
+}
